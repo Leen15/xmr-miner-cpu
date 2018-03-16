@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 git clone https://github.com/Leen15/wolf-cpuminer-multi
 cd wolf-cpuminer-multi/
 ./autogen.sh
 CFLAGS="-march=native" ./configure
+make clean
 make
 
 echo "USERNAME is set to $USERNAME"
@@ -28,5 +29,4 @@ else
   echo "THREADS is set to $THREADS"
 fi
 
-#sysctl -w vm.nr_hugepages=8 NOT possible in docker or with privileged container
 nice -n $PRIORITY ./minerd -a $ALGORITHM -o $URL -u $USERNAME -p $PASSWORD -t $THREADS

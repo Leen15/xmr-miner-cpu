@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Luca Mattivi <luca@smartdomotik.com>
 
 RUN apt-get update && apt-get install -y \
@@ -8,7 +8,12 @@ RUN apt-get update && apt-get install -y \
     autotools-dev \
     libjansson-dev \
     autoconf \
-    libcurl4-gnutls-dev \
+    pkg-config \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libgmp-dev \
+    make \
+    g++ \
     git && apt-get clean ; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV USERNAME=NOTSET
@@ -19,4 +24,4 @@ ENV PRIORITY=19
 
 ADD run.sh /usr/local/bin/run.sh
 RUN chmod 755 /usr/local/bin/run.sh
-CMD sh /usr/local/bin/run.sh
+ENTRYPOINT ["/usr/local/bin/run.sh"]
