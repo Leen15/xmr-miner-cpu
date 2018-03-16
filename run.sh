@@ -1,7 +1,6 @@
-#!/bin/bash
-
-git clone https://github.com/wolf9466/cpuminer-multi
-cd cpuminer-multi/
+#!/bin/sh
+git clone https://github.com/virtual-coin/wolf-cpuminer-multi
+cd wolf-cpuminer-multi/
 ./autogen.sh
 CFLAGS="-march=native" ./configure
 make
@@ -10,7 +9,7 @@ echo "USERNAME is set to $USERNAME"
 echo "ALGORITHM is set to $ALGORITHM"
 echo "URL is set to $URL"
 
-L3CACHE_KB=$(lscpu | grep -e '^L3' | tr -s ' ' | cut -d' ' -f3 | tr -d 'K')
+L3CACHE_KB=$(lscpu | grep -e '^L3' | tr -s ' ' | cut -d' ' -f3 | tr -d 'K' | tr -d '\n')
 L3CACHE_MB=$(($L3CACHE_KB/1024))
 echo "Found $L3CACHE_MB MB L3 cache"
 

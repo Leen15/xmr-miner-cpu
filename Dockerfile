@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Reimund Klain <reimund.klain@condevtec.de>
+MAINTAINER Luca Mattivi <luca@smartdomotik.com>
 
 RUN apt-get update && apt-get install -y \
     libcurl3 \
@@ -19,4 +19,4 @@ ENV PRIORITY=19
 
 ADD run.sh /usr/local/bin/run.sh
 RUN chmod 755 /usr/local/bin/run.sh
-CMD /usr/local/bin/run.sh
+CMD sh /usr/local/bin/run.sh
