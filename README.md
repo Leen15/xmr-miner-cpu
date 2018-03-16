@@ -32,6 +32,6 @@ docker run -d -e USERNAME=username -e THREADS=4 condevtec/xmr-miner-cpu
 # Links
 
 * Github: https://github.com/Leen15/xmr-miner-cpu
-* Wolf's CPU miner: https://github.com/virtual-coin/wolf-cpuminer-multi
+* Wolf's CPU miner: https://github.com/Leen15/wolf-cpuminer-multi
 * Minergate: http://minergate.com/
 * Docker Hub: https://hub.docker.com/r/leen15/xmr-miner-cpu/

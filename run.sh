@@ -1,5 +1,5 @@
 #!/bin/sh
-git clone https://github.com/virtual-coin/wolf-cpuminer-multi
+git clone https://github.com/Leen15/wolf-cpuminer-multi
 cd wolf-cpuminer-multi/
 ./autogen.sh
 CFLAGS="-march=native" ./configure
