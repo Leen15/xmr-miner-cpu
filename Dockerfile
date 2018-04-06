@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 
 ENV USERNAME=NOTSET
 ENV PASSWORD=x
-ENV URL="stratum+tcp://xmr.pool.minergate.com:45560"
+ENV URL="stratum+tcp://xmr.pool.minergate.com:45700"
 ENV ALGORITHM=cryptonight
 ENV PRIORITY=19
 
